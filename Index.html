@@ -1,0 +1,248 @@
+<div class="wrap" style="border: 2px solid rgb(51, 51, 51); margin: 0px; padding: 3px;">
+<span style="color: #444444;"><html lang="en">
+  <head>
+  <style>
+      @import url('https://fonts.googleapis.com/css?family=Roboto');
+      
+      * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+     
+     body {
+  font-family: 'Roboto', sans-serif;
+  background: #999;
+  color: #fff;
+  line-height: 1.6;
+}
+
+    .mider {
+  position: relative;
+  overflow: hidden;
+  height: 50%;
+  width: 100vw;
+}
+   
+   
+.mide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 86%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+} 
+
+    
+    .mide.current {
+  opacity: 1;
+}
+     
+     
+.mide .content {
+  position: absolute;
+  bottom: 5px;
+  left: -600px;
+  opacity: 0;
+  width: 600px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+  padding: 3px;
+}
+   
+   
+.mide .content h1 {
+  margin-bottom: 2px;
+}
+
+.mide.current .content {
+  opacity: 0.5;
+  transform: translateX(600px);
+  transition: all 0.7s ease-in-out 0.3s;
+}
+
+.buttons button#next {
+  position: absolute;
+  right: 15px;
+}
+
+.buttons button#prev {
+  position: absolute;
+  left: 15px;
+}
+
+.buttons button {
+  border: 2px solid #ccc;
+  background-color: transparent;
+  color: #ccc;
+  cursor: pointer;
+  padding: 13px 15px;
+  border-radius: 50%;
+  outline: none;
+}
+
+.buttons button:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+@media (max-width: 500px) {
+  .mide .content {
+    bottom: -200px;
+    left: 0;
+    width: 100%;
+  }
+
+  .mide.current .content {
+    transform: translateY(-200px);
+  }
+}
+
+
+/* Backgorund Images */
+ 
+.mide:first-child {
+  background: url('https://1.bp.blogspot.com/-v47TiH76ggs/X8OfOc5iUpI/AAAAAAAADXA/IFwCaCIVAsw_XgFDrT5LuhavOq9uTQC7QCNcBGAsYHQ/s2048/20201108_103159.jpg') no-repeat
+    center top/cover;
+}
+.mide:nth-child(2) {
+  background: url('https://1.bp.blogspot.com/-L2iyk7Kz-yA/X8OfPP-gJfI/AAAAAAAADXE/vezsSwbvhr0mrqcmfIsSrzxdowDTWLbvQCNcBGAsYHQ/s2048/20201108_103206.jpg') no-repeat
+    center top/cover;
+}
+.mide:nth-child(3) {
+  background: url('https://1.bp.blogspot.com/-yXw_XMibUnE/X8OfUse4G9I/AAAAAAAADXM/zA4wW9GMukk6OQKDxzSfTtzQJN7gQm_kQCNcBGAsYHQ/s2048/20201108_103352.jpg') no-repeat
+    center top/cover;
+}
+.mide:nth-child(4) {
+  background: url('https://1.bp.blogspot.com/-As-dvwqON3Y/X8OfVakfXzI/AAAAAAAADXQ/s9xftn-Sf28WqWL3V820o5ymQlQLz2N_QCNcBGAsYHQ/s2048/20201108_103452.jpg') no-repeat
+    center top/cover;
+}
+.mide:nth-child(5) {
+  background: url('https://1.bp.blogspot.com/-wQqPb8f7bbU/X8OfXJpxwFI/AAAAAAAADXU/cu5TjyOp7ckaBi_hBhgEm3_QLQNmVLLFACNcBGAsYHQ/s2048/20201108_104157.jpg') no-repeat
+    center top/cover;
+}
+
+  .mide:nth-child(6)  {
+  background: url('https://1.bp.blogspot.com/-hV75Nl6b4Rc/X8OfZMXV0GI/AAAAAAAADXg/vJ1Z-9Y5mT8uNqZirl8PVPDCDkiY4WV_wCNcBGAsYHQ/s2048/20201108_104223.jpg') no-repeat
+    center center/cover;
+}  
+
+  </style>
+     
+    
+    
+    <title>Full Screen Slider</title>
+    <link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" rel="stylesheet"></link>
+  </head>
+  <body>
+    <div class="mider">
+      <div class="mide current">
+        <div class="content">
+          <h1>
+Image One</h1>
+</div>
+</div>
+<div class="mide">
+        <div class="content">
+          <h1>
+Image Two</h1>
+</div>
+</div>
+<div class="mide">
+        <div class="content">
+          <h1>
+Image Three</h1>
+</div>
+</div>
+<div class="mide">
+        <div class="content">
+          <h1>
+Image Four</h1>
+</div>
+</div>
+<div class="mide">
+        <div class="content">
+          <h1>
+Image Five</h1>
+</div>
+</div>
+<div class="mide">
+        <div class="content">
+          <h1>
+Image Six</h1>
+</div>
+</div>
+</div>
+<div class="buttons">
+      <button id="prev"><i class="fas fa-arrow-left"></i></button>
+      <button id="next"><i class="fas fa-arrow-right"></i></button>
+    </div>
+<script>
+        const mides = document.querySelectorAll('.mide');
+const next = document.querySelector('#next');
+const prev = document.querySelector('#prev');
+const auto = true; // Auto scroll
+const intervalTime = 5000;
+var mideInterval;
+
+const nextMide = () => {
+  // Get current class
+  const current = document.querySelector('.current');
+  // Remove current class
+  current.classList.remove('current');
+  // Check for next slide
+  if (current.nextElementSibling) {
+    // Add current to next sibling
+    current.nextElementSibling.classList.add('current');
+  } else {
+    // Add current to start
+    mides[0].classList.add('current');
+  }
+  setTimeout(() => current.classList.remove('current'));
+};
+
+const prevMide = () => {
+  // Get current class
+  const current = document.querySelector('.current');
+  // Remove current class
+  current.classList.remove('current');
+  // Check for prev slide
+  if (current.previousElementSibling) {
+    // Add current to prev sibling
+    current.previousElementSibling.classList.add('current');
+  } else {
+    // Add current to last
+    mides[mides.length - 1].classList.add('current');
+  }
+  setTimeout(() => current.classList.remove('current'));
+};
+
+// Button events
+next.addEventListener('click', e => {
+  nextMide();
+  if (auto) {
+    clearInterval(mideInterval);
+    mideInterval = setInterval(nextMide, intervalTime);
+  }
+});
+
+prev.addEventListener('click', e => {
+  prevMide();
+  if (auto) {
+    clearInterval(mideInterval);
+    mideInterval = setInterval(nextMide, intervalTime);
+  }
+});
+
+// Auto slide
+if (auto) {
+  // Run next slide at interval time
+  mideInterval = setInterval(nextMide, intervalTime);
+}
+
+    </script>
+  </body>
+</html>
+</span></div>
